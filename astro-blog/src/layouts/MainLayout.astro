@@ -1,0 +1,23 @@
+---
+import MainHead from "./MainHead.astro"
+import Boki from "../components/bok.astro"
+import Nav from "../components/Nav.astro";
+import 'bootstrap/dist/css/bootstrap.css'
+
+
+
+import "../styles/global.css"
+
+
+const {title = "Tufuncionario info", description = "Default Description"} = Astro.props;
+
+---
+
+<html lang="en">
+    <MainHead {title} {description}/>
+    <body>
+    <Nav />
+        <slot>Texto</slot>
+    <Boki/>
+    </body>
+</html>
